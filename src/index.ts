@@ -121,3 +121,5 @@ export interface BrowserProfile {
 export type MetaMaskImportOptions = Partial<
   Record<ImportableBrowser, Partial<Record<PackageManager, BrowserProfile[]>>>
 >
+
+export type GamePageActions = 'install' | 'launch'
