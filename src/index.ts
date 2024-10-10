@@ -123,3 +123,5 @@ export type MetaMaskImportOptions = Partial<
 >
 
 export type GamePageActions = 'install' | 'launch'
+
+export type ClientUpdateStatuses = 'idle' | 'updating' | 'updated'
