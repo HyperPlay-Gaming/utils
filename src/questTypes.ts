@@ -1,3 +1,5 @@
+import { Runner } from 'overlay'
+
 export interface Reward {
   id: number
   amount_per_user: number | null
@@ -33,6 +35,10 @@ export interface Quest {
       required_playstreak_in_days: number
       minimum_session_time_in_seconds: number
     }
+  }
+  quest_external_game: null | {
+    store_redirect_url: string
+    runner: Runner
   }
 }
 
