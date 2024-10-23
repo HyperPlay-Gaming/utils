@@ -40,6 +40,7 @@ export interface Quest {
     store_redirect_url: string
     runner: Runner
   }
+  num_of_times_repeatable: number | null
 }
 
 export interface RewardClaimSignature {
