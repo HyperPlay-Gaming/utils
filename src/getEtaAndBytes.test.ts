@@ -23,6 +23,9 @@ describe('getETAStringFromMs', () => {
   test('should return "1d" for 90000000 milliseconds', () => {
     expect(getETAStringFromMs(1000 * 60 * 60 * 24 + 1000 * 60 * 60)).toBe('1d')
   })
+  test('should return "+1000d" if the ETA is over 1000 days', () => {
+    expect(getETAStringFromMs(86500000000)).toBe('+1000d')
+  })
 })
 
 describe('calculateEtaFromBytes', () => {
@@ -40,6 +43,10 @@ describe('calculateEtaFromBytes', () => {
 
   test('should return "6d" for 1000 bytes downloaded out of 5500000000 bytes at 10 bytes/second', () => {
     expect(calculateEtaFromBytes(1000, 10, 5500000000)).toBe('6d')
+  })
+
+  test('should return "+1000d" if the ETA is over 1000 days', () => {
+    expect(calculateEtaFromBytes(1000, 1, 100000000000000)).toBe('+1000d')
   })
 
   test('should return null for infinite remaining seconds', () => {

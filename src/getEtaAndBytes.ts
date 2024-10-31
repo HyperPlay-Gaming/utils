@@ -16,6 +16,9 @@ export function getETAStringFromMs(etaInMs: number) {
   const days = Math.floor(totalSeconds / 86400)
 
   if (days > 0) {
+    if (days > 1000) {
+      return '+1000d'
+    }
     return `${days}d`
   } else if (hours > 0) {
     return `${hours}h:${minutes}m`
