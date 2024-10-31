@@ -12,6 +12,7 @@ export * from './parseNumIntoReadableString'
 export * from './playstreak'
 export * from './getNumClaimsLeft'
 export * from './questTypes'
+export * from './getEtaAndBytes'
 
 function getDomainNameFromHostName(url: URL) {
   const domainNameParts = url.hostname.split('.')
