@@ -59,7 +59,10 @@ export interface HyperPlayAPI {
   returnExtensionRequestEvents: EventEmitter
   errorExtensionRequestEvents: EventEmitter
   providerRequests: EventEmitter
-  toggleOverlay: (arg: { action?: OverlayAction }) => Promise<void>
+  toggleOverlay: (arg: {
+    action?: OverlayAction
+    actionCause?: OverlayActionCause
+  }) => Promise<void>
   removePopup: () => Promise<void>
   getCurrentWeb3Provider: () => any
   i18n: {
