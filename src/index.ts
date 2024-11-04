@@ -80,13 +80,15 @@ export interface HyperPlayAPI {
  */
 export async function toggleOverlay({
   action = 'TOGGLE',
+  actionCause = 'AUTOMATED',
   api
 }: {
   action?: OverlayAction
+  actionCause?: OverlayActionCause
   api: HyperPlayAPI
 }) {
   try {
-    api.backendEvents.emit('overlayToggled', action)
+    api.backendEvents.emit('overlayToggled', action, actionCause)
   } catch (err) {
     console.log(`Error in hp overlay toggle ${err}`)
   }
@@ -126,3 +128,5 @@ export type MetaMaskImportOptions = Partial<
 export type GamePageActions = 'install' | 'launch'
 
 export type ClientUpdateStatuses = 'idle' | 'updating' | 'updated'
+
+export type OverlayActionCause = 'AUTOMATED' | 'HOTKEY'
