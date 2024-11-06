@@ -128,7 +128,7 @@ export type MetaMaskImportOptions = Partial<
   Record<ImportableBrowser, Partial<Record<PackageManager, BrowserProfile[]>>>
 >
 
-export type GamePageActions = 'install' | 'launch'
+export type GamePageActions = 'install' | 'launch' | 'update'
 
 export type ClientUpdateStatuses = 'idle' | 'updating' | 'updated'
 
