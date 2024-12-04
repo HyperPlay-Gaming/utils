@@ -10,6 +10,9 @@ export interface Reward {
   contract_address: `0x${string}`
   decimals: number | null
   token_ids: {
+    id: number
+    name: string
+    status: string
     amount_per_user: string
     token_id: number
     numClaimsLeft: string
