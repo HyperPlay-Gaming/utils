@@ -21,12 +21,14 @@ export interface Reward {
   numClaimsLeft: string
 }
 
+export type QuestStatus = 'ACTIVE' | 'INACTIVE' | 'DRAFT' | 'COMPLETED'
+
 export interface Quest {
   id: number
   project_id: string
   name: string
   type: 'REPUTATIONAL-AIRDROP' | 'PLAYSTREAK'
-  status: string
+  status: QuestStatus
   description: string
   rewards?: Reward[]
   /* eslint-disable-next-line */
