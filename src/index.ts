@@ -133,3 +133,9 @@ export type GamePageActions = 'install' | 'launch' | 'update'
 export type ClientUpdateStatuses = 'idle' | 'updating' | 'updated'
 
 export type OverlayActionCause = 'AUTOMATED' | 'HOTKEY'
+
+export interface LogOptions {
+  sentryException?: unknown
+  sentryExtra?: Record<string, unknown>
+  sentryTags?: Record<string, string>
+}
