@@ -21,7 +21,12 @@ export interface Reward {
   numClaimsLeft: string
 }
 
-export type QuestStatus = 'ACTIVE' | 'INACTIVE' | 'DRAFT' | 'CLAIMABLE' | 'COMPLETED'
+export type QuestStatus =
+  | 'ACTIVE'
+  | 'INACTIVE'
+  | 'DRAFT'
+  | 'CLAIMABLE'
+  | 'COMPLETED'
 
 export interface Quest {
   id: number
