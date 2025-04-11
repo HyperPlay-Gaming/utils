@@ -21,13 +21,18 @@ export interface Reward {
   numClaimsLeft: string
 }
 
-export type QuestStatus = 'ACTIVE' | 'INACTIVE' | 'DRAFT' | 'COMPLETED'
+export type QuestStatus =
+  | 'ACTIVE'
+  | 'INACTIVE'
+  | 'DRAFT'
+  | 'COMPLETED'
+  | 'CLAIMABLE'
 
 export interface Quest {
   id: number
   project_id: string
   name: string
-  type: 'REPUTATIONAL-AIRDROP' | 'PLAYSTREAK'
+  type: 'REPUTATIONAL-AIRDROP' | 'PLAYSTREAK' | 'LEADERBOARD'
   status: QuestStatus
   description: string
   rewards?: Reward[]
@@ -46,6 +51,8 @@ export interface Quest {
     runner: Runner
   }
   num_of_times_repeatable: number | null
+  start_date: string | null
+  end_date: string | null
 }
 
 export interface RewardClaimSignature {
@@ -90,4 +97,9 @@ export interface PointsCollection {
   name: string
   symbol: string
   image: string
+}
+
+export interface ExternalEligibility {
+  walletOrEmail: string
+  amount: number
 }
