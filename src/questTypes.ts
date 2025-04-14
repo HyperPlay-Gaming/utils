@@ -53,6 +53,7 @@ export interface Quest {
   num_of_times_repeatable: number | null
   start_date: string | null
   end_date: string | null
+  leaderboard_url: string | null
 }
 
 export interface RewardClaimSignature {
