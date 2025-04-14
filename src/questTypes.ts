@@ -2,7 +2,7 @@ import { Runner } from 'overlay'
 
 export interface Reward {
   id: number
-  amount_per_user: string | null
+  amount_per_user: number | null
   chain_id: number | null
   marketplace_url: string | null
   reward_type: 'ERC20' | 'ERC721' | 'ERC1155' | 'POINTS' | 'EXTERNAL-TASKS'
@@ -25,14 +25,14 @@ export type QuestStatus =
   | 'ACTIVE'
   | 'INACTIVE'
   | 'DRAFT'
-  | 'CLAIMABLE'
   | 'COMPLETED'
+  | 'CLAIMABLE'
 
 export interface Quest {
   id: number
   project_id: string
   name: string
-  type: 'REPUTATIONAL-AIRDROP' | 'PLAYSTREAK'
+  type: 'REPUTATIONAL-AIRDROP' | 'PLAYSTREAK' | 'LEADERBOARD'
   status: QuestStatus
   description: string
   rewards?: Reward[]
@@ -51,6 +51,8 @@ export interface Quest {
     runner: Runner
   }
   num_of_times_repeatable: number | null
+  start_date: string | null
+  end_date: string | null
 }
 
 export interface RewardClaimSignature {
@@ -95,4 +97,9 @@ export interface PointsCollection {
   name: string
   symbol: string
   image: string
+}
+
+export interface ExternalEligibility {
+  walletOrEmail: string
+  amount: number
 }
