@@ -140,3 +140,5 @@ export interface LogOptions {
   sentryExtra?: Record<string, unknown>
   sentryTags?: Record<string, string>
 }
+
+export * from './parseChainMetadataToWagmiChain'
