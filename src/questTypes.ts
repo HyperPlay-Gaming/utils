@@ -57,8 +57,8 @@ export interface Quest {
 }
 
 export interface HardwareAttestation {
-  signature: string,
-  message: string,
+  signature: string
+  message: string
 }
 
 export interface RewardClaimSignature {
