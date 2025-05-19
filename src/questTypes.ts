@@ -56,6 +56,11 @@ export interface Quest {
   leaderboard_url: string | null
 }
 
+export interface HardwareAttestation {
+  signature: string,
+  message: string,
+}
+
 export interface RewardClaimSignature {
   signature: `0x${string}`
   nonce: string
