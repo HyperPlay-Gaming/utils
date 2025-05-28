@@ -19,6 +19,7 @@ export interface Reward {
   }[]
   image_url: string
   numClaimsLeft: string
+  num_claims_per_device: string
 }
 
 export type QuestStatus =
