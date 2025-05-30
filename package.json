@@ -1,6 +1,6 @@
 {
   "name": "@hyperplay/utils",
-  "version": "0.3.16-beta.1",
+  "version": "0.3.16",
   "description": "",
   "main": "index.js",
   "scripts": {
