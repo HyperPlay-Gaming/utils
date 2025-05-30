@@ -108,5 +108,5 @@ export interface PointsCollection {
 
 export interface ExternalEligibility {
   walletOrEmail: string
-  amount: number
+  amount: string
 }
