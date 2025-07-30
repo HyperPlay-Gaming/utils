@@ -22,7 +22,7 @@ export interface OverlayRenderState {
   showBackgroundTint: boolean
 }
 
-export type Runner = 'legendary' | 'gog' | 'sideload' | 'hyperplay'
+export type Runner = 'legendary' | 'gog' | 'sideload' | 'hyperplay' | 'steam'
 
 export interface ExtensionStateInterface {
   isPopupOpen: boolean
